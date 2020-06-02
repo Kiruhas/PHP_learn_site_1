@@ -1,0 +1,135 @@
+body{
+    font-size: 15px;
+    font-family: 'Montserrat', bold;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+  /*
+  font-family: 'Montserrat', sans-serif;
+  */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+  
+h1,h2,h3,h4,h5,h6 {
+    margin:0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 50px;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+.header_list {
+    display: block;
+}
+
+.list_btn {  
+    margin: auto;
+    text-decoration: none;
+    color: rgb(74, 113, 163);
+}
+
+/* states */
+
+.states {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.states_item {
+    width: 30%;
+    margin: 10px 10px;
+    border: 1px solid rgb(140, 201, 236);
+}
+
+.item_header {
+    text-align: center;
+    margin: 0 30px 10px;
+}
+
+.item_content {
+    margin: 0px 5px;
+}
+
+.item_btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.item_btns a {
+    text-align: center;
+}
+
+.btns_edit {
+    text-decoration: none;
+    color: rgb(52, 163, 24);
+    width: 60%;
+}
+
+.btns_delete { 
+    text-decoration: none;
+    color: rgb(209, 13, 13);
+    width: 40%;
+}
+
+/* Add Form */
+
+.form {
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.add_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add_form_input {
+    margin: 20px auto 5px;
+    width: 50%;
+}
+
+.add_form_submit {
+    margin: 20px auto 5px;
+    width: 50%;
+}
+
+/* Edit Form */
+
+.edit_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit_form_input {
+    margin: 20px auto 5px;
+    width: 50%;
+}
+
+.edit_form_submit {
+    margin: 20px auto 5px;
+    width: 50%;
+}
