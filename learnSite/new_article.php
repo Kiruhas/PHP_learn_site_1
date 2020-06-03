@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="css/style.css">
     <title>PHP Learning!</title>
 </head>
-<body>  
+<body>
+    <?php require "blocks/header.php" ?>
     <div class="container">
         <div class="form">
             <h2>Добавить статью</h2>

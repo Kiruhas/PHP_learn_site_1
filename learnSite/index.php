@@ -23,7 +23,7 @@
 
                 $query_text = 'SELECT * FROM "public"."Новости" ORDER BY id';
                 $query = pg_query($db_connection, $query_text);
-                echo '<div>' . $_COOKIE['user'] . '</div>';
+                // echo '<div>' . $_COOKIE['user'] . $_COOKIE['privilege'] . '</div>'; Проверка куки
                 while ($res = pg_fetch_object($query)):
             ?>
                 <div class="states_item">

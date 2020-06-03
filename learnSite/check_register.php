@@ -24,12 +24,12 @@
     }
 
     $add_mas = [
-        'Login' => trim($login),
-        'Pass' => md5($pass),
-        'Privilege' => 'Пользователь'
+        'username' => trim($login),
+        'pass' => md5($pass),
+        'privilege' => 'Пользователь'
     ];
 
-    $res = pg_insert($db_connection, 'Пользователи', $add_mas);
+    $res = pg_insert($db_connection, 'users', $add_mas);
     pg_close($db_connection);
     if ($res){
         echo 'Пользователь успешно зарегистрирован!';

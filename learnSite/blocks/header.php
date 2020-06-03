@@ -1,10 +1,13 @@
 <div class="container">
     <header class="header">
-        <h2 class="logo">Новости</h2>
-        <div class="header_list">
-            <a class="list_btn" href="new_article.php">Добавить статью</a>
+        <a class="logo" href="/">Новости</a>
+        <div class="header_list">       
             <?php if ($_COOKIE['user'] == 'Да'): ?>
+                <?php if ($_COOKIE['privilege'] == 'Администратор'): ?>
+                    <a class="list_btn" href="new_article.php">Добавить статью</a>
+                <?php endif ?>
                 <a class="list_btn" href="index.php">Кабинет</a>
+                <a class="list_btn" href="auth_exit.php">Выйти</a>
             <?php else: ?>
                 <a class="list_btn" href="register.php">Регистрация</a>
                 <a class="list_btn" href="auth.php">Войти</a>
