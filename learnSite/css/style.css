@@ -36,49 +36,66 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .logo {
-    margin-left: 20px;
+    margin-left: 10px;
     text-decoration: none;
-    font-size: 30px;
-    color: black;
+    font-size: 35px;
+    color: rgb(66, 64, 64);
+
 }
 
 .header_list {
+    font-size: 20px;
     display: block;
 }
 
 .list_btn {  
-    margin: auto;
+    margin: auto 5px;
+    padding: 5px 10px;
     text-decoration: none;
     color: rgb(74, 113, 163);
+    border: 1px solid rgb(50, 146, 190);
+    border-radius: 2ch;
+    transition: color .15s linear, background .15s linear;
+}
+
+.list_btn:hover {
+    background-color: rgb(50, 146, 190);
+    color: rgb(241, 229, 229); 
 }
 
 /* states */
 
 .states {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .states_item {
-    width: 30%;
-    margin: 10px 10px;
-    border: 1px solid rgb(140, 201, 236);
+    position: relative;
+    width: 48%;
+    margin: 25px auto;
+    box-shadow: 0 0 10px 1px rgb(179, 170, 170);
 }
 
 .item_header {
     text-align: center;
-    margin: 0 30px 10px;
+    margin: 5px auto 10px;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.item_header::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(74, 113, 163);
 }
 
 .item_content {
-    margin: 0px 5px;
-}
-
-.item_btns {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
+    margin: 0 10px 30px 10px;
+    font-size: 20px;
 }
 
 .item_btns a {
@@ -86,15 +103,19 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .btns_edit {
+    position: absolute;
+    left: 20px;
+    bottom: 3px;
     text-decoration: none;
     color: rgb(52, 163, 24);
-    width: 60%;
 }
 
 .btns_delete { 
+    position: absolute;
+    right: 20px;
+    bottom: 3px;
     text-decoration: none;
     color: rgb(209, 13, 13);
-    width: 40%;
 }
 
 /* Add Form */

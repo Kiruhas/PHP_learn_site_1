@@ -29,10 +29,8 @@
                 <div class="states_item">
                     <div class="item_header"><?php echo $res -> Заголовок ?></div>
                     <div class="item_content"><?php echo $res -> Содержание ?></div>
-                    <div class="item_btns">
-                        <a class="btns_edit" href="edit.php?edit_id=<?php echo $res -> id ?>">Редактировать</a>
-                        <a class="btns_delete" href="?del_id=<?php echo $res -> id ?>">Удалить</a>
-                    </div>
+                    <a class="btns_edit" href="edit.php?edit_id=<?php echo $res -> id ?>">Редактировать</a>
+                    <a class="btns_delete" href="?del_id=<?php echo $res -> id ?>">Удалить</a>
                 </div>
             <?php endwhile; pg_free_result($query);?>
         </div>
