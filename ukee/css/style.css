@@ -24,31 +24,39 @@ h1,h2,h3,h4,h5,h6 {
     padding: 0 15px;
 }
 
-/* header */
+/* Header */
 
 .header {
+    width: 100%;
+    position: absolute;
+    padding-top: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header_inner {
     display: flex;
     justify-content: space-between;
-    position: relative;
-    height: 50px;
     align-items: center;
-    vertical-align: middle;
 }
 
-.logo {
-    margin-left: 10px;
-    text-decoration: none;
-    font-size: 35px;
-    color: rgb(66, 64, 64);
-
+.header_logo {
+    font-size: 30px;
+    margin-top: -10px;
+    font-weight: 700;
+    color: rgb(8, 5, 5);
 }
 
-.header_list {
+/* Navigation */
+
+.nav {
     font-size: 20px;
     display: block;
 }
 
-.list_btn {  
+.nav_btn {  
     margin: auto 5px;
     padding: 5px 10px;
     text-decoration: none;
@@ -58,17 +66,18 @@ h1,h2,h3,h4,h5,h6 {
     transition: color .15s linear, background .15s linear;
 }
 
-.list_btn:hover {
+.nav_btn:hover {
     background-color: rgb(50, 146, 190);
     color: rgb(241, 229, 229); 
 }
 
-/* states */
+/* States */
 
 .states {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 80px;
 }
 
 .states_item {
