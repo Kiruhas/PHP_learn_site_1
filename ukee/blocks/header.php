@@ -1,7 +1,16 @@
 <header class="header">
     <div class="container">
         <div class="header_inner">
-            <a class="header_logo" href="/">Тут будет логотип</a>
+            <div class="header_logo">
+                <a class="logo_link" href="/">
+                    <img src="../images/Header_icon.png" alt="">
+                </a>
+                <ul class="logo_categories">
+                    <li class="category_films"><a href="">Фильмы</a></li>
+                    <li class="category_serials"><a href="">Сериалы</a></li>
+                    <li class="category_subscription"><a href="">Подписка</a></li>
+                </ul>
+            </div>
             <div class="nav">       
                 <?php if ($_COOKIE['user'] == 'Да'): ?>
                     <?php if ($_COOKIE['privilege'] == 'Администратор'): ?>
