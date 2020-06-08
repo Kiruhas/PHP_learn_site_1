@@ -420,4 +420,58 @@ h1,h2,h3,h4,h5,h6 {
     color: rgb(219, 29, 76);
 }
 
+.authorizate {
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+}
+
+.authorizate_center {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin: 130px auto;
+}
+
+.authorizate_login {
+    background-color: rgb(47, 22, 107);
+}
+
+.authorizate_login:hover {
+    background-color: rgb(65, 38, 126);
+    border: 2px solid rgb(219, 29, 76);
+    margin: -2px 50px;
+}
+
+.authorizate_ili {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.authorizate_register, .authorizate_login {
+    margin:auto 30px;
+    border-radius: 2ch;
+    cursor: pointer;
+    font-size: 26px;
+    transition: background .15s linear,
+    margin .2s linear;
+}
+
+.authorizate_register {
+    background-color: rgb(219, 29, 76);
+}
+
+.authorizate_register:hover {
+    background-color: rgb(245, 70, 114);
+    border: 2px solid rgb(71, 38, 148);
+    margin: -2px 50px;
+}
+
+.authorizate_login a, .authorizate_register a {
+    text-decoration: none;
+    color: #fff;
+    margin: 3px 20px;
+}
+
  

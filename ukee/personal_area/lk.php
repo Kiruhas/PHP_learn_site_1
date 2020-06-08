@@ -6,6 +6,7 @@
 <?php require "../blocks/html_structure_open.php" ?>
 <?php require "../blocks/header.php" ?>
 
+<?php if ($_COOKIE['login' == 'Да']): ?>
 <div class="container">
     <div class="personal">
         <div class="personal_header">
@@ -42,6 +43,21 @@
         </div>
     </div>
 </div>
+<?php else: ?>
+<div class="container">
+    <div class="authorizate">
+        <div class="authorizate_center">
+            <div class="authorizate_login">
+                <a href="auth.php">Войти</a>
+            </div>
+            <div class="authorizate_ili"> или </div>
+            <div class="authorizate_register">
+                <a href="register.php">Зарегистрироваться</a>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif ?>
 
 <?php pg_close($db_connection) ?>
 <?php require "../blocks/html_structure_close.php" ?>

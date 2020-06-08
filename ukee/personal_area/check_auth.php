@@ -1,5 +1,5 @@
 <?php
-    $conn_string = "host=localhost port=5438 dbname=phpLearn user=postgres password=dg4ao9hv";
+    $conn_string = "host=localhost port=5438 dbname=ukkeMovies user=postgres password=dg4ao9hv";
     $db_connection = pg_connect($conn_string);
 
     $login = $_POST['login'];
@@ -19,11 +19,11 @@
     }
 
     $pass = md5($pass);
-    $query = pg_query_params($db_connection, 'SELECT * FROM users WHERE username = $1 AND pass = $2', array($login, $pass));
+    $query = pg_query_params($db_connection, 'SELECT id FROM users WHERE username = $1 AND pass = $2', array($login, $pass));
     $res = pg_fetch_object($query);
 
     if ($res){
-        setcookie('user', 'Да', time() + 3600, '/');
+        setcookie('login', 'Да', time() + 3600, '/');
         setcookie('privilege', $res -> privilege, time() + 3600, '/');
         header('Location: /');
     } else {
