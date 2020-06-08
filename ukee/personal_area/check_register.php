@@ -38,4 +38,4 @@
     }
 ?>
 <br>
-<a href="index.php">На главную</a>
+<a href="../index.php">На главную</a>

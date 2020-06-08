@@ -12,16 +12,7 @@
                 </ul>
             </div>
             <div class="nav">       
-                <?php if ($_COOKIE['user'] == 'Да'): ?>
-                    <?php if ($_COOKIE['privilege'] == 'Администратор'): ?>
-                        <a class="nav_btn" href="new_article.php">Добавить статью</a>
-                    <?php endif ?>
-                    <a class="nav_btn" href="/">Кабинет</a>
-                    <a class="nav_btn" href="auth_exit.php">Выйти</a>
-                <?php else: ?>
-                    <a class="nav_btn" href="register.php">Регистрация</a>
-                    <a class="nav_btn" href="auth.php">Войти</a>
-                <?php endif ?>
+                <a class="nav_btn" href="../personal_area/lk.php">Кабинет</a>
             </div>
         </div>
     </header>
