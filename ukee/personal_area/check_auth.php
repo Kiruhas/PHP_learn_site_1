@@ -19,13 +19,13 @@
     }
 
     $pass = md5($pass);
-    $query = pg_query_params($db_connection, 'SELECT id FROM users WHERE username = $1 AND pass = $2', array($login, $pass));
+    $query = pg_query_params($db_connection, 'SELECT id FROM users WHERE username = $1 AND password = $2', array($login, $pass));
     $res = pg_fetch_object($query);
 
     if ($res){
-        setcookie('login', 'Да', time() + 3600, '/');
-        setcookie('privilege', $res -> privilege, time() + 3600, '/');
-        header('Location: /');
+        setcookie('log', 'Да', time() + 3600, '/');
+        setcookie('id', $res -> id, time() + 3600, '/');
+        header('Location: /personal_area/lk.php');
     } else {
         echo 'Такой пользователь не найден!';
     }

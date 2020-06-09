@@ -113,7 +113,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .nav_btn:hover {
-    background-color: rgb(219, 29, 76); 
+    background-color: rgb(219, 29, 76);
 }
 
 /* Popular in subscription */
@@ -271,13 +271,33 @@ h1,h2,h3,h4,h5,h6 {
 
 .add_form_input {
     margin: 20px auto 5px;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: .7ch;
+    text-align: center;
     width: 50%;
+    font-size: 20px;
 }
 
 .add_form_submit {
-    margin: 20px auto 5px;
+    margin: 20px auto 15px;
+    border: 0;
+    padding: 5px 0;
+    font-size: 24px;
+    border-radius: .7ch;
+    color: rgb(163, 163, 163);
+    background-color: rgb(143, 42, 67);
     width: 50%;
+    cursor: pointer;
+    transition: color .3s linear, 
+    background .2s linear;
 }
+
+.add_form_submit:hover {
+    color: #fff;
+    background-color: rgb(219, 29, 76);
+}
+
 
 /* Edit Form */
 
@@ -416,14 +436,20 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 700;
 }
 
-.back_changepass:hover, .back_out:hover {
+.back_out_word, .back_change_word {
+    text-decoration: none;
+    color: #fff;
+    transition: color .2s linear;
+}
+
+.back_changepass:hover a, .back_out:hover a {
     color: rgb(219, 29, 76);
 }
 
 .authorizate {
     display: inline-block;
     width: 100%;
-    height: 400px;
+    height: 245px;
     align-items: center;
 }
 
@@ -431,7 +457,7 @@ h1,h2,h3,h4,h5,h6 {
     width: 40%;
     display: flex;
     justify-content: center;
-    margin: 130px auto;
+    margin: 100px auto;
 }
 
 .authorizate_login {
@@ -440,8 +466,8 @@ h1,h2,h3,h4,h5,h6 {
 
 .authorizate_login:hover {
     background-color: rgb(65, 38, 126);
-    border: 2px solid rgb(219, 29, 76);
-    margin: -2px 50px;
+    border: 2px solid rgb(219, 29, 76);    
+    transform: translate(-5px, 0) scale(1.06);
 }
 
 .authorizate_ili {
@@ -451,11 +477,13 @@ h1,h2,h3,h4,h5,h6 {
 
 .authorizate_register, .authorizate_login {
     margin:auto 30px;
+    border: 2px solid transparent;
     border-radius: 2ch;
     cursor: pointer;
     font-size: 26px;
-    transition: background .15s linear,
-    margin .2s linear;
+    transition: background .3s linear,
+    transform .3s linear, 
+    border .5s ease-in-out;
 }
 
 .authorizate_register {
@@ -464,8 +492,8 @@ h1,h2,h3,h4,h5,h6 {
 
 .authorizate_register:hover {
     background-color: rgb(245, 70, 114);
-    border: 2px solid rgb(71, 38, 148);
-    margin: -2px 50px;
+    border: 2px solid rgb(104, 69, 187);
+    transform: translate(5px, 0) scale(1.06);
 }
 
 .authorizate_login a, .authorizate_register a {
@@ -474,4 +502,49 @@ h1,h2,h3,h4,h5,h6 {
     margin: 3px 20px;
 }
 
+.input_data {
+    position: relative;
+    width: 100%;
+}
+
+/* Authorizate form */
+
+.authorizate_form {
+    visibility: hidden; 
+    height: 200px;
+}
+
+.authorizate_form.active {
+    visibility: visible;
+}
+
+.auth_form {
+    position: absolute;
+    max-width: 470px;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Registrate form */
+
+.registrate_form {
+    visibility: hidden;
+}
+
+.registrate_form.active {
+    visibility: visible;
+}
+
+.reg_form {
+    position: absolute;
+    max-width: 470px;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
  

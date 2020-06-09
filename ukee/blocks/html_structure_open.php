@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>ukke.ru</title>
     <link rel="shortcut icon" href="../images/favicon.png" type="image/png">
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 </head>
 <body>
     <div class="margin_header"></div>

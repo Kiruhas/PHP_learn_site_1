@@ -1,10 +1,11 @@
 <?php
-    $conn_string = "host=localhost port=5438 dbname=phpLearn user=postgres password=dg4ao9hv";
+    $conn_string = "host=localhost port=5438 dbname=ukkeMovies user=postgres password=dg4ao9hv";
     $db_connection = pg_connect($conn_string);
 
     $login = $_POST['login'];
     $pass = $_POST['password'];
     $pass_2 = $_POST['password_check'];
+    $mail = $_POST['email'];
 
     $error = '';
     if (trim($login) == ''){
@@ -25,17 +26,16 @@
 
     $add_mas = [
         'username' => trim($login),
-        'pass' => md5($pass),
-        'privilege' => 'Пользователь'
+        'password' => md5($pass),
+        'privilege' => 'User',
+        'mail' => $mail
     ];
 
     $res = pg_insert($db_connection, 'users', $add_mas);
     pg_close($db_connection);
-    if ($res){
-        echo 'Пользователь успешно зарегистрирован!';
-    } else {
+    if (!$res){
         echo 'Неудача!';
+        echo '<a href="../index.php">На главную</a>';
     }
 ?>
 <br>
-<a href="../index.php">На главную</a>
