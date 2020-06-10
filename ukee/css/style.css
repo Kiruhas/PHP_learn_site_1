@@ -507,6 +507,14 @@ h1,h2,h3,h4,h5,h6 {
     width: 100%;
 }
 
+.lk_error {
+    width: 100%;
+    text-align: center;
+    color: rgb(219, 29, 76);
+    font-size: 20px;
+    transform: translate(0, -20px);
+}
+
 /* Authorizate form */
 
 .authorizate_form {

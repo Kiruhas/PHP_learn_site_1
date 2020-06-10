@@ -67,6 +67,22 @@
                 <a href="=" id="reg_btn">Зарегистрироваться</a>
             </div>
         </div>
+            <?php if ($_GET['er_auth'] == 'wrlog'): ?>
+                <div class="lk_error" id="lk_error_auth">Введите логин!</div>
+            <?php elseif ($_GET['er_auth'] == 'wrpas'): ?>
+                <div class="lk_error" id="lk_error_auth">Введите пароль!</div>
+            <?php elseif ($_GET['er_auth'] == 'wruser'): ?>
+                <div class="lk_error" id="lk_error_auth">Неверный логин или пароль!</div>
+            <?php endif ?>
+            <?php if ($_GET['er_reg'] == 'wrlog'): ?>
+                <div class="lk_error" id="lk_error_reg">Введите логин!</div>
+            <?php elseif ($_GET['er_reg'] == 'wrpas'): ?>
+                <div class="lk_error" id="lk_error_reg">Слишком короткий пароль! (минимум 6 символов)</div>
+            <?php elseif ($_GET['er_reg'] == 'wrpas_each'): ?>
+                <div class="lk_error" id="lk_error_reg">Пароли не совпадают!</div>
+            <?php elseif ($_GET['er_reg'] == 'wrmail'): ?>
+                <div class="lk_error" id="lk_error_reg">Введите почту!</div>
+            <?php endif ?>    
     </div>
     <div class="input_data">
         <div class="authorizate_form" id="auth_form">
@@ -92,7 +108,7 @@
     </div>
 </div>
 <?php endif ?>
-
+<?php unset($_GET) ?>
 
 
 <?php pg_close($db_connection) ?>

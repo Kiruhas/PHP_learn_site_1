@@ -7,21 +7,18 @@
     $pass_2 = $_POST['password_check'];
     $mail = $_POST['email'];
 
-    $error = '';
     if (trim($login) == ''){
-        $error = 'Введите логин!';
-    } else if (trim($pass) == ''){
-        $error = 'Введите пароль!';
-    } else if (trim(strlen($pass) < 6)){
-        $error = 'Пароль должен содержать минимум 6 символов!';
-    } else if (trim($pass) != trim($pass_2)){
-        $error = 'Пароли не совпадают!';
-    }
-
-    if ($error != ''){
-        echo $error;
         pg_close($db_connection);
-        exit;
+        header('Location: /personal_area/lk.php?er_reg=wrlog');
+    } else if (trim(strlen($pass) < 6)){
+        pg_close($db_connection);
+        header('Location: /personal_area/lk.php?er_reg=wrpas'); 
+    } else if (trim($pass) != trim($pass_2)){
+        pg_close($db_connection);
+        header('Location: /personal_area/lk.php?er_reg=wrpas_each');
+    } else if (trim($mail) == ''){
+        pg_close($db_connection);
+        header('Location: /personal_area/lk.php?er_reg=wrmail');
     }
 
     $add_mas = [

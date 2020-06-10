@@ -5,17 +5,14 @@
     $login = $_POST['login'];
     $pass = $_POST['password'];
 
-    $error = '';
     if (trim($login) == ''){
-        $error = 'Введите логин!';
-    } else if (trim($pass) == ''){
-        $error = 'Введите пароль!';
-    }
-
-    if ($error != ''){
-        echo $error;
         pg_close($db_connection);
-        exit;
+        setcookie('error_lk', 'yes', time() + 3600, '/');
+        header('Location: /personal_area/lk.php?er_auth=wrlog');
+    } else if (trim($pass) == ''){
+        pg_close($db_connection);
+        setcookie('error_lk', 'yes', time() + 3600, '/');
+        header('Location: /personal_area/lk.php?er_auth=wrpas');
     }
 
     $pass = md5($pass);
@@ -27,7 +24,7 @@
         setcookie('id', $res -> id, time() + 3600, '/');
         header('Location: /personal_area/lk.php');
     } else {
-        echo 'Такой пользователь не найден!';
+        header('Location: /personal_area/lk.php?er_auth=wruser');
     }
     pg_close($db_connection);
 ?>
